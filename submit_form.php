@@ -44,18 +44,10 @@ if(empty($message)){
 
 	if (empty($errors)){
 
-
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
 	$dbname = "techsolv";
-
-
-
-
-
-
-
 	$conn = new mysqli($servername,$username,$password,$dbname);
 	if($conn->connect_error){
 		die("Connection failed:" .$conn->connect_error);
@@ -89,6 +81,7 @@ if(empty($message)){
 	                header("Refresh: 7; URL = contact_form.html");
 	                exit();
 	}else{
+	
 		$errors["database"] = "Error: " .$sql. "<br>" .$conn->error;
 	}
 	$conn->close();
