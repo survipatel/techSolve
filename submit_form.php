@@ -85,7 +85,7 @@ if(empty($message)){
 
 	                mail($to,$subject,$message);
 	                echo " Thank you for your Submission";
-	                //$conn->close();
+	                $conn->close();
 	                header("Refresh: 7; URL = contact_form.html");
 	                exit();
 	}else{
